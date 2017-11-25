@@ -1,0 +1,15 @@
+/*
+ * Theme Name: mytheme
+ * Description: My init theme
+ * Theme URI: http://tmqits.me
+ * Version: 1.0
+ * Author: Tran Manh Quynh
+ * Author URI: 
+ * Tags: basic, two-columns, post format
+ * Textdomain: tmq
+ * Languages Folder: /languages
+ */
+
+li.widget {
+	list-style-type: none;
+}
