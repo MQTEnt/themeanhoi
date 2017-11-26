@@ -33,6 +33,7 @@ class Intro_Widget extends WP_Widget {
 
         $this->defaults = array(
             'title' => '',
+            'content' => '',
             'image' => '',
             'link'  => '',
         );
@@ -59,24 +60,44 @@ class Intro_Widget extends WP_Widget {
         $instance = wp_parse_args( (array) $instance, $this->defaults );
 
         echo $args['before_widget'];
+        ?>
+        <!-- /.intro section -->
+        <div id="intro">
+            <div class="container">
+                <div class="row">
 
-            if ( ! empty( $instance['title'] ) )
-                echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . $args['after_title'];
+                    <!-- /.intro image -->
+                    <div class="col-md-6 intro-pic wow slideInLeft">
+                    <?php
+                        echo ( ! empty( $instance['link'] ) ) ? '<a href="' . $instance['link'] . '">' : '';
+                        echo ( ! empty( $instance['image'] ) ) ? '<img src="' . $instance['image'] . '" alt="image" class="img-responsive" />' : '';
+                        echo ( ! empty( $instance['link'] ) ) ? '</a>' : '';
+                    ?>
+                    </div>  
 
-            echo ( ! empty( $instance['link'] ) ) ? '<a href="' . $instance['link'] . '">' : '';
-
-            echo ( ! empty( $instance['image'] ) ) ? '<img src="' . $instance['image'] . '" alt="" />' : '';
-
-            echo ( ! empty( $instance['link'] ) ) ? '</a>' : '';
-
+                    <!-- /.intro content -->
+                    <div class="col-md-6 wow slideInRight">
+                        <?php 
+                            //Show Title
+                            if ( ! empty( $instance['title'] ) )
+                                echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . $args['after_title'];
+                            //Show Content
+                            echo ( ! empty( $instance['content'] ) ) ? '<p>'.$instance['content'].'</p>':'';
+                        ?>
+                        <div class="btn-section"><a href="#feature" class="btn-default">Learn More</a></div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+        <?php
         echo $args['after_widget'];
-
     }
 
     // Update a particular instance.
     function update( $new_instance, $old_instance ) {
 
         $new_instance['title']  = strip_tags( $new_instance['title'] );
+        $new_instance['content']  = strip_tags( $new_instance['content'] );
         $new_instance['image']  = strip_tags( $new_instance['image'] );
         $new_instance['link']   = strip_tags( $new_instance['link'] );
 
@@ -95,7 +116,10 @@ class Intro_Widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'tmq' ); ?>:</label>
             <input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" class="widefat" />
         </p>
-
+        <p>
+            <label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Content', 'tmq' ); ?>:</label>
+            <textarea id="<?php echo $this->get_field_id( 'content' ); ?>" rows="10" cols="50" name="<?php echo $this->get_field_name( 'content' ); ?>" class="widefat"><?php echo esc_attr( $instance['content'] ); ?></textarea>
+        </p>
         <p>
             <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image', 'tmq' ); ?>:</label>
             <div class="tmq-media-container">
