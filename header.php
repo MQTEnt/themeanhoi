@@ -22,7 +22,7 @@
                         <div class="col-md-7">
 
                             <!-- /.logo -->
-                            <div class="logo wow fadeInDown"> <a href=""><img src="wp-content/themes/mytheme/imgs/logo.png" alt="logo"></a></div>
+                            <div class="logo wow fadeInDown"> <a href=""><img src="<?php header_image(); ?>" alt="logo"></a></div>
 
                             <!-- /.main title -->
                             <h1 class="wow fadeInLeft">
@@ -56,7 +56,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand site-name" href="#top"><img src="wp-content/themes/mytheme/imgs/logo2.png" alt="logo"></a>
+                        <a class="navbar-brand site-name" href="#top"><img src="<?php header_image(); ?>" alt="logo"></a>
                     </div>
 
                     <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">

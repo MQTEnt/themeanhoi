@@ -22,16 +22,33 @@ if(!isset($content_width)){
 @ KHAI BÁO CHỨC NĂNG CỦA THEME
 */
 if(!function_exists('tmq_theme_setup')){
-  function tmq_theme_setup() {
-    $center = [
-      'name' => __('Phần hiển thị các Widget', 'tmq'),
-      'id' => 'center-sidebar',
-      'description' => __('Phần hiển thị các Widget cho trang, chọn các Widget có trong danh sách vào khu vực này'),
-      'class' => 'center-sidebar',
-    ];
-    register_sidebar($center);
-  }
-  add_action('init', 'tmq_theme_setup'); //Hook
+  	function tmq_theme_setup() {
+	    $center = [
+	      'name' => __('Phần hiển thị các Widget', 'tmq'),
+	      'id' => 'center-sidebar',
+	      'description' => __('Phần hiển thị các Widget cho trang, chọn các Widget có trong danh sách vào khu vực này'),
+	      'class' => 'center-sidebar',
+	    ];
+	    register_sidebar($center);
+
+	    //Add Custom Header
+	    $defaults = array(
+			'default-image'          => '',
+			'width'                  => 0,
+			'height'                 => 0,
+			'flex-height'            => false,
+			'flex-width'             => false,
+			'uploads'                => true,
+			'random-default'         => false,
+			'header-text'            => true,
+			'default-text-color'     => '',
+			'wp-head-callback'       => '',
+			'admin-head-callback'    => '',
+			'admin-preview-callback' => '',
+		);
+		add_theme_support( 'custom-header', $defaults );
+  	}
+  	add_action('init', 'tmq_theme_setup'); //Hook
 }
 
 
