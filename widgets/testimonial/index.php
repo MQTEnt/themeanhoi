@@ -66,38 +66,120 @@ class Testimonial_Widget extends WP_Widget {
 
         echo $args['before_widget'];
 
-        echo ( ! empty( $instance['title'] ) )?$instance['title']:'None';
-        echo '<hr>';
+        // echo ( ! empty( $instance['title'] ) )?$instance['title']:'None';
+        // echo '<hr>';
 
-        echo ( ! empty( $instance['title_1'] ) )?$instance['title_1']:'None';
-        echo '<br>';
-        echo ( ! empty( $instance['image_1'] ) )?'<img src="'.$instance['image_1'].'" style="width:100px; height: 100px"':'None';
-        echo '<br>';
-        echo ( ! empty( $instance['content_1'] ) )?$instance['content_1']:'None';
-        echo '<br>';
-        echo ( ! empty( $instance['link_1'] ) )?$instance['link_1']:'None';
-        echo '<hr>';
+        // echo ( ! empty( $instance['title_1'] ) )?$instance['title_1']:'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['image_1'] ) )?'<img src="'.$instance['image_1'].'" style="width:100px; height: 100px"':'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['content_1'] ) )?$instance['content_1']:'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['link_1'] ) )?$instance['link_1']:'None';
+        // echo '<hr>';
 
-        echo ( ! empty( $instance['title_2'] ) )?$instance['title_2']:'None';
-        echo '<br>';
-        echo ( ! empty( $instance['image_2'] ) )?'<img src="'.$instance['image_2'].'" style="width:100px; height: 100px"':'None';
-        echo '<br>';
-        echo ( ! empty( $instance['content_2'] ) )?$instance['content_2']:'None';
-        echo '<br>';
-        echo ( ! empty( $instance['link_2'] ) )?$instance['link_2']:'None';
-        echo '<hr>';
+        // echo ( ! empty( $instance['title_2'] ) )?$instance['title_2']:'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['image_2'] ) )?'<img src="'.$instance['image_2'].'" style="width:100px; height: 100px"':'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['content_2'] ) )?$instance['content_2']:'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['link_2'] ) )?$instance['link_2']:'None';
+        // echo '<hr>';
 
-        echo ( ! empty( $instance['title_3'] ) )?$instance['title_3']:'None';
-        echo '<br>';
-        echo ( ! empty( $instance['image_3'] ) )?'<img src="'.$instance['image_3'].'" style="width:100px; height: 100px"':'None';
-        echo '<br>';
-        echo ( ! empty( $instance['content_3'] ) )?$instance['content_3']:'None';
-        echo '<br>';
-        echo ( ! empty( $instance['link_3'] ) )?$instance['link_3']:'None';
-        echo '<hr>';
+        // echo ( ! empty( $instance['title_3'] ) )?$instance['title_3']:'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['image_3'] ) )?'<img src="'.$instance['image_3'].'" style="width:100px; height: 100px"':'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['content_3'] ) )?$instance['content_3']:'None';
+        // echo '<br>';
+        // echo ( ! empty( $instance['link_3'] ) )?$instance['link_3']:'None';
+        // echo '<hr>';
 
+        ?>
+        <!-- /.testimonial section -->
+        <div id="testi">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="wow fadeInLeft"><?php echo $instance['title']; ?></h2>
+                    <div class="title-line wow fadeInRight"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1"> 
+                        <div id="owl-testi" class="owl-carousel owl-theme wow fadeInUp">
 
+                            <!-- /.testimonial 1 -->
+                            <div class="testi-item">
+                                <div class="client-pic text-center">
+                                    <?php
+                                        if(! empty( $instance['image_1'] )):
+                                            echo '<a href="'.$instance['link_1'].'">';
+                                            echo "<img src='".$instance['image_1']."' alt=''>";
+                                            echo '</a>';
+                                        endif;
+                                    ?>
+                                </div>
+                                <div class="box">
+                                    <!-- /.testimonial content -->
+                                    <p class="message text-center">"<?php echo $instance['content_1']; ?>"</p>
+                                </div>
+                                <div class="client-info text-center">
+                                    <!-- /.title -->
+                                    <?php echo $instance['title_1']; ?>
+                                    <!-- <span class="company"></span> -->  
+                                </div>
+                            </div>      
 
+                            <!-- /.testimonial 2 -->
+                            <div class="testi-item">
+                                <div class="client-pic text-center">
+                                    <?php
+                                        if(! empty( $instance['image_2'] )):
+                                            echo '<a href="'.$instance['link_2'].'">';
+                                            echo "<img src='".$instance['image_2']."' alt=''>";
+                                            echo '</a>';
+                                        endif;
+                                    ?>
+                                </div>
+                                <div class="box">
+                                    <!-- /.testimonial content -->
+                                    <p class="message text-center">"<?php echo $instance['content_2']; ?>"</p>
+                                </div>
+                                <div class="client-info text-center">
+                                    <!-- /.title -->
+                                    <?php echo $instance['title_2']; ?>
+                                    <!-- <span class="company"></span> -->  
+                                </div>
+                            </div>
+
+                            <!-- /.testimonial 3 -->
+                            <div class="testi-item">
+                                <div class="client-pic text-center">
+                                    <?php
+                                        if(! empty( $instance['image_3'] )):
+                                            echo '<a href="'.$instance['link_3'].'">';
+                                            echo "<img src='".$instance['image_3']."' alt=''>";
+                                            echo '</a>';
+                                        endif;
+                                    ?>
+                                </div>
+                                <div class="box">
+                                    <!-- /.testimonial content -->
+                                    <p class="message text-center">"<?php echo $instance['content_3']; ?>"</p>
+                                </div>
+                                <div class="client-info text-center">
+                                    <!-- /.title -->
+                                    <?php echo $instance['title_3']; ?>
+                                    <!-- <span class="company"></span> -->  
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </div>  
+            </div>
+        </div>
+
+        <?php
         echo $args['after_widget'];
     }
 
