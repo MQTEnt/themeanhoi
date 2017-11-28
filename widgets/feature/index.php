@@ -7,6 +7,8 @@ function feature_widget_script($hook) {
     global $wp_customize;
 
     if ( 'widgets.php' === $hook || isset( $wp_customize ) ) {
+        //Script media (Image) has already included in Intro widget
+
         wp_register_style('icon', get_template_directory_uri().'/fonts/icon-7-stroke/css/pe-icon-7-stroke.css', 'all');
         wp_enqueue_style('icon');
 
@@ -31,6 +33,7 @@ class Feature_Widget extends WP_Widget {
         $this->defaults = array(
             'title' => '',
             'content' => '',
+            'image' => '',
 
             'title_1'=> '',
             'icon_1' => '',
@@ -86,11 +89,16 @@ class Feature_Widget extends WP_Widget {
                 </div>
                 <div class="row row-feat">
                     <div class="col-md-4 text-center">
-
                         <!-- /.feature image -->
-                        <div class="feature-img">
-                            <img src="wp-content/themes/mytheme/imgs/feature-image.jpg" alt="image" class="img-responsive wow fadeInLeft">
-                        </div>
+                        <?php
+                            if(! empty( $instance['image'] )):
+                        ?>
+                            <div class="feature-img">
+                                <img src="<?php echo $instance['image']; ?>" alt="image" class="img-responsive wow fadeInLeft">
+                            </div>
+                        <?php 
+                            endif;
+                        ?>
                     </div>
 
                     <div class="col-md-8">
@@ -142,6 +150,7 @@ class Feature_Widget extends WP_Widget {
     function update( $new_instance, $old_instance ) {
         $new_instance['title']  = strip_tags( $new_instance['title'] );
         $new_instance['content']  = strip_tags( $new_instance['content'] );
+        $new_instance['image']  = strip_tags( $new_instance['image'] );
 
         $new_instance['title_1']  = strip_tags( $new_instance['title_1'] );
         $new_instance['icon_1']  = strip_tags( $new_instance['icon_1'] );
@@ -187,6 +196,26 @@ class Feature_Widget extends WP_Widget {
             <label for="<?php echo $this->get_field_id( 'content' ); ?>"><?php _e( 'Content', 'tmq' ); ?>:</label>
             <textarea id="<?php echo $this->get_field_id( 'content' ); ?>" rows="5" cols="50" name="<?php echo $this->get_field_name( 'content' ); ?>" class="widefat"><?php echo esc_attr( $instance['content'] ); ?></textarea>
         </p>
+        <p>
+            <label for="<?php echo $this->get_field_id( 'image' ); ?>"><?php _e( 'Image', 'tmq' ); ?>:</label>
+            <div class="tmq-media-container">
+                <div class="tmq-media-inner">
+                    <?php $img_style = ( $instance[ 'image' ] != '' ) ? '' : 'style="display:none;"'; ?>
+                    <img id="<?php echo $this->get_field_id( 'image' ); ?>-preview" src="<?php echo esc_attr( $instance['image'] ); ?>" <?php echo $img_style; ?> />
+                    <?php $no_img_style = ( $instance[ 'image' ] != '' ) ? 'style="display:none;"' : ''; ?>
+                    <span class="tmq-no-image" id="<?php echo $this->get_field_id( 'image' ); ?>-noimg" <?php echo $no_img_style; ?>><?php _e( 'No image selected', 'tmq' ); ?></span>
+                </div>
+            
+            <input type="text" id="<?php echo $this->get_field_id( 'image' ); ?>" name="<?php echo $this->get_field_name( 'image' ); ?>" value="<?php echo esc_attr( $instance['image'] ); ?>" class="tmq-media-url" />
+
+            <input type="button" value="<?php echo _e( 'Remove', 'tmq' ); ?>" class="button tmq-media-remove" id="<?php echo $this->get_field_id( 'image' ); ?>-remove" <?php echo $img_style; ?> />
+
+            <?php $button_text = ( $instance[ 'image' ] != '' ) ? __( 'Change Image', 'tmq' ) : __( 'Select Image', 'tmq' ); ?>
+            <input type="button" value="<?php echo $button_text; ?>" class="button tmq-media-upload" id="<?php echo $this->get_field_id( 'image' ); ?>-button" />
+            <br class="clear">
+            </div>
+        </p>
+
         <div class="feature-widget-item">
             <p>
                 <label for="<?php echo $this->get_field_id( 'title_1' ); ?>"><?php _e( 'Title 1', 'tmq' ); ?>:</label>
