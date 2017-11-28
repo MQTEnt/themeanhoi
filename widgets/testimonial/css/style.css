@@ -1,0 +1,31 @@
+.tmq-media-container {
+	width: 98%;
+}
+
+.tmq-media-inner {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+	border-radius: 2px;
+	margin-bottom: 10px;
+}
+
+.widget-description img,
+.tmq-media-inner img {
+	max-width: 100%;
+	height: auto;
+}
+
+.tmq-media-url {
+	display: none;
+}
+
+.tmq-media-remove {
+	float: left;
+	width: 48%;
+}
+
+.tmq-media-upload {
+	float: right;
+	width: 48%;
+}

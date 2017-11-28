@@ -216,7 +216,7 @@ class Feature_Widget extends WP_Widget {
             </div>
         </p>
 
-        <div class="feature-widget-item">
+        <div class="inside-widget-item">
             <p>
                 <label for="<?php echo $this->get_field_id( 'title_1' ); ?>"><?php _e( 'Title 1', 'tmq' ); ?>:</label>
                 <input type="text" id="<?php echo $this->get_field_id( 'title_1' ); ?>" name="<?php echo $this->get_field_name( 'title_1' ); ?>" value="<?php echo esc_attr( $instance['title_1'] ); ?>" class="widefat" />
@@ -240,7 +240,7 @@ class Feature_Widget extends WP_Widget {
             </p>
         </div>
 
-        <div class="feature-widget-item">
+        <div class="inside-widget-item">
             <p>
                 <label for="<?php echo $this->get_field_id( 'title_2' ); ?>"><?php _e( 'Title 2', 'tmq' ); ?>:</label>
                 <input type="text" id="<?php echo $this->get_field_id( 'title_2' ); ?>" name="<?php echo $this->get_field_name( 'title_2' ); ?>" value="<?php echo esc_attr( $instance['title_2'] ); ?>" class="widefat" />
@@ -264,7 +264,7 @@ class Feature_Widget extends WP_Widget {
             </p>
         </div>
 
-        <div class="feature-widget-item">
+        <div class="inside-widget-item">
             <p>
                 <label for="<?php echo $this->get_field_id( 'title_3' ); ?>"><?php _e( 'Title 3', 'tmq' ); ?>:</label>
                 <input type="text" id="<?php echo $this->get_field_id( 'title_3' ); ?>" name="<?php echo $this->get_field_name( 'title_3' ); ?>" value="<?php echo esc_attr( $instance['title_3'] ); ?>" class="widefat" />
@@ -288,7 +288,7 @@ class Feature_Widget extends WP_Widget {
             </p>
         </div>
 
-        <div class="feature-widget-item">
+        <div class="inside-widget-item">
             <p>
                 <label for="<?php echo $this->get_field_id( 'title_4' ); ?>"><?php _e( 'Title 4', 'tmq' ); ?>:</label>
                 <input type="text" id="<?php echo $this->get_field_id( 'title_4' ); ?>" name="<?php echo $this->get_field_name( 'title_4' ); ?>" value="<?php echo esc_attr( $instance['title_4'] ); ?>" class="widefat" />

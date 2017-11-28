@@ -7,10 +7,10 @@ select.feature-widget-select {
 select.feature-widget-select option{
 	font-weight: bold;
 }
-.feature-widget-item{
+.inside-widget-item{
 	border: 0.5px solid #c6c9ce;
 	border-radius: 15px;
 	padding: 10px;
-	margin: 5px;
+	margin: 30px 5px;
 }
 
