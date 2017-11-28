@@ -1,0 +1,16 @@
+select.feature-widget-select {
+	font-family: 'Pe-icon-7-stroke', 'sans-serif';
+	font-size: 1.5em;
+	font-weight: bold;
+	border: none;
+}
+select.feature-widget-select option{
+	font-weight: bold;
+}
+.feature-widget-item{
+	border: 0.5px solid #c6c9ce;
+	border-radius: 15px;
+	padding: 10px;
+	margin: 5px;
+}
+

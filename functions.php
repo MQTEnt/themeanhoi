@@ -55,6 +55,7 @@ if(!function_exists('tmq_theme_setup')){
 //Add Widgets
 require_once( THEME_URL . "/widgets/demo.php" );
 require_once( THEME_URL . "/widgets/intro/index.php" );
+require_once( THEME_URL . "/widgets/feature/index.php" );
 
 
 
