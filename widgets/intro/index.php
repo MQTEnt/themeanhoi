@@ -39,17 +39,17 @@ class Intro_Widget extends WP_Widget {
         );
 
         $widget_ops = array(
-            'classname'   => 'tmq-media-widget',
+            'classname'   => 'tmq-intro-widget',
             'description' => __( 'Display Intro widget ', 'tmq' ),
         );
 
         $control_ops = array(
-            'id_base' => 'tmq-media-widget',
+            'id_base' => 'tmq-intro-widget',
             'width'   => 200,
             'height'  => 250,
         );
 
-        parent::__construct( 'tmq-media-widget', __( 'Intro Widget', 'tmq' ), $widget_ops, $control_ops );
+        parent::__construct( 'tmq-intro-widget', __( 'Intro Widget', 'tmq' ), $widget_ops, $control_ops );
 
     }
 
