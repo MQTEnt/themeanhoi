@@ -71,6 +71,8 @@ class Mail_Contact_Widget extends WP_Widget {
 		                            </div>
 		                            <div class="form-group">
 		                                <input type="button" id="btn-submit" name="btn-submit" value="Gửi yêu cầu" class="btn btn-success wow fadeInUp" />
+		                            	<div id="container-send-loading" style="text-align: center; margin: 10px 0">
+		                          		</div>
 		                            </div>
 		                        </form>
 		                        <script>
@@ -103,8 +105,10 @@ class Mail_Contact_Widget extends WP_Widget {
 		                                                    context: this,
 		                                                    beforeSend: function(){
 		                                                        //Do something...
+		                                                        $('#container-send-loading').append("<img id='send-loading' style='width: 50px; height: 50px; text-align: center' src='<?php echo get_template_directory_uri().'/imgs/sending.gif' ?>'/>");
 		                                                    },
 		                                                    success: function(response) {
+		                                                    	$('#send-loading').remove();
 		                                                        if(response.success) {
 		                                                            alert(response.data);
 		                                                            //Clean form

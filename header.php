@@ -22,7 +22,7 @@
                         <div class="col-md-7">
 
                             <!-- /.logo -->
-                            <div class="logo wow fadeInDown"> <a href=""><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a></div>
+                            <div class="logo wow fadeInDown"> <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a></div>
 
                             <!-- /.main title -->
                             <h1 class="wow fadeInLeft">
