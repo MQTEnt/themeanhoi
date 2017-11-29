@@ -76,6 +76,31 @@ function active_nav_item ($classes, $item) {
     return $classes;
 }
 
+/*
+@ Display post title
+*/
+if(!function_exists('tmq_entry_header')){
+	function tmq_entry_header(){ ?>
+		<h2 class=""><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+	<?php }
+}
+/*
+@ Display entry content
+*/
+if(!function_exists('tmq_entry_content')){
+	function tmq_entry_content(){
+		if(!is_single() && !is_page()){
+			//Hiển thị phần rút ngọn nội dung nếu không phải là trang đơn (Single) và Page
+			the_excerpt();
+		}
+		else{
+			//Hiển thị toàn bộ nội dung nếu là trang đơn (single.php) và Page (page.php)
+			the_content();
+			echo '<p class="post-date">'.get_the_date().'</p>';
+		}
+	}
+}
+
 //Add Widgets
 require_once( THEME_URL . "/widgets/demo.php" );
 require_once( THEME_URL . "/widgets/intro/index.php" );

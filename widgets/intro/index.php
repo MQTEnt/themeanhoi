@@ -84,7 +84,7 @@ class Intro_Widget extends WP_Widget {
                             //Show Content
                             echo ( ! empty( $instance['content'] ) ) ? '<p>'.$instance['content'].'</p>':'';
                         ?>
-                        <div class="btn-section"><a href="#feature" class="btn-default">Learn More</a></div>
+                        <div class="btn-section"><a href="<?php echo $instance['link']; ?>" class="btn-default">Xem thêm</a></div>
                     </div>
                 </div>            
             </div>

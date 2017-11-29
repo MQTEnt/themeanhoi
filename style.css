@@ -13,3 +13,51 @@
 li.widget {
 	list-style-type: none;
 }
+
+.entry-header{
+	text-align: center;
+	margin: 30px 0px 10px;
+}
+
+.entry-content{
+	padding: 50px 5%;
+}
+article{
+	border: 1px solid #ede1e2;
+	border-radius: 15px;
+	margin: 10px 15px;
+}
+.post-date{
+    margin-top: 30px;
+    text-align: right;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+/*Custom post */
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aligncenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.alignright {
+    padding: 4px;
+    margin: 0 0 2px 7px;
+    display: inline;
+}
+img.alignleft {
+    padding: 4px;
+    margin: 0 7px 2px 0;
+    display: inline;
+}
+.alignright {
+    float: right;
+}
+.alignleft {
+    float: left;
+}

@@ -3,8 +3,6 @@
 	<head>
         <meta charset="<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <link rel="icon" href="wp-content/themes/mytheme/imgs/logo.png" type="image/x-icon" />
-        <link rel="shortcut icon" href="wp-content/themes/mytheme/imgs/logo.png" type="image/x-icon" />
         <!-- Google Fonts -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
         <?php wp_head(); ?>
@@ -36,8 +34,8 @@
 
                             <!-- /.header button -->
                             <div class="head-btn wow fadeInLeft">
-                                <a href="#feature" class="btn-primary">Features</a>
-                                <a href="#download" class="btn-default">Download</a>
+                                <a href="#" class="btn-primary">Button</a>
+                                <a href="#" class="btn-default">Button</a>
                             </div>
                         </div>
                     </div>
