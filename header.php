@@ -54,7 +54,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand site-name" href="#top"><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a>
+                        <a class="navbar-brand site-name" href="<?php echo get_site_url(); ?>"><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a>
                     </div>
 
                     <!-- Navigator -->
