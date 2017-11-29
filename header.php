@@ -15,14 +15,14 @@
         <div id="top"></div>
 
         <!-- /.parallax full screen background image -->
-        <div class="fullscreen landing parallax" style="background-image:url('wp-content/themes/mytheme/imgs/bg.jpg');" data-img-width="2000" data-img-height="1333" data-diff="100">
+        <div class="fullscreen landing parallax" style="background-image:url('<?php header_image(); ?>');" data-img-width="2000" data-img-height="1333" data-diff="100">
             <div class="overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-7">
 
                             <!-- /.logo -->
-                            <div class="logo wow fadeInDown"> <a href=""><img src="<?php header_image(); ?>" alt="logo"></a></div>
+                            <div class="logo wow fadeInDown"> <a href=""><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a></div>
 
                             <!-- /.main title -->
                             <h1 class="wow fadeInLeft">
@@ -56,7 +56,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand site-name" href="#top"><img src="<?php header_image(); ?>" alt="logo"></a>
+                        <a class="navbar-brand site-name" href="#top"><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a>
                     </div>
 
                     <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
