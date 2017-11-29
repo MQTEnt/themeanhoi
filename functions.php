@@ -60,8 +60,8 @@ if(!function_exists('display_menu')){
     $menu = array(
       'theme_location' => $slug,
       'container' => 'div',
-      'container_class' => 'collapse navbar-collapse navbar-backyard navbar-right',
-      'container_id' => 'navbar-scroll',
+      'container_class' => 'collapse navbar-collapse navbar-right',
+      'container_id' => 'btn-navbar-collapse',
       'menu_class' => 'nav navbar-nav'
     );
     wp_nav_menu($menu);
@@ -168,9 +168,6 @@ function tmq_style(){
 
   	wp_register_script('custom-js', get_template_directory_uri().'/js/custom.js', ['jquery-custom'], false, true);
   	wp_enqueue_script('custom-js');
-
-  	wp_register_script('jquery-sticky-js', get_template_directory_uri().'/js/jquery.sticky.js', [], false, true);
-  	wp_enqueue_script('jquery-sticky-js');
 
   	wp_register_script('wow-js', get_template_directory_uri().'/js/wow.min.js', [], false, true);
   	wp_enqueue_script('wow-js');

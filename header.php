@@ -42,13 +42,13 @@
                 </div> 
             </div> 
         </div>
-
-        <!-- NAVIGATION -->
+        <!-- Navigator -->
         <div id="menu">
-            <nav class="navbar-wrapper navbar-default" role="navigation">
+            <nav class="navbar navbar-default" data-spy="affix" data-offset-top="500">
                 <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-backyard">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#btn-navbar-collapse" aria-expanded="false">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -56,9 +56,8 @@
                         </button>
                         <a class="navbar-brand site-name" href="<?php echo get_site_url(); ?>"><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a>
                     </div>
-
-                    <!-- Navigator -->
+                    <!-- Navigator item -->
                     <?php display_menu('navbar'); ?>
-                </div>
+                </div><!-- /.container-fluid -->
             </nav>
         </div>

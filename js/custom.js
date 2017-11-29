@@ -45,9 +45,10 @@ $("#owl-testi").owlCarousel
 
 
 /* sticky navigation */
-  $(document).ready(function(){
-    $("#menu").sticky({topSpacing:0});
-  });
+// TMQ_Custom
+// $(document).ready(function(){
+//     $("#menu").sticky({topSpacing:0});
+// });
 
 jQuery(document).ready(function($) {  
 

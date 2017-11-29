@@ -75,9 +75,10 @@ a:hover {
     height: 100%;
     display: block;
 }
-#menu {
+/*TMQ_Custom*/
+/*#menu {
 	z-index: 99;
-}
+}*/
 .navbar-default {
 	background: rgba(255, 255, 255, 0.95);
 	box-shadow: 0px 0.5px 2px #cecece;
@@ -253,7 +254,7 @@ a:hover {
 	padding: 100px 0 70px;
 }
 #intro {
-	padding: 100px 0 70px;
+	padding: 10px 0 70px;
 }
 #intro h2 {
 	font-size: 40px;

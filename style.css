@@ -33,6 +33,15 @@ article{
     font-size: 0.85em;
     font-style: italic;
 }
+/* Navigation Bar */
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+.affix + .container-fluid {
+    padding-top: 70px;
+}
 
 /*Custom post */
 img.centered {
