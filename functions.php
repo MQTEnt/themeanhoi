@@ -58,6 +58,7 @@ require_once( THEME_URL . "/widgets/intro/index.php" );
 require_once( THEME_URL . "/widgets/feature/index.php" );
 require_once( THEME_URL . "/widgets/testimonial/index.php" );
 require_once( THEME_URL . "/widgets/contact-mail/index.php" );
+require_once( THEME_URL . "/widgets/social-footer/index.php" );
 
 /*** Mail contact handle ***/
 add_action( 'wp_ajax_mail_handle', 'mail_handle_init' );
