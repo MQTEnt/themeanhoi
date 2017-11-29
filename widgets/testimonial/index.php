@@ -65,37 +65,6 @@ class Testimonial_Widget extends WP_Widget {
         $instance = wp_parse_args( (array) $instance, $this->defaults );
 
         echo $args['before_widget'];
-
-        // echo ( ! empty( $instance['title'] ) )?$instance['title']:'None';
-        // echo '<hr>';
-
-        // echo ( ! empty( $instance['title_1'] ) )?$instance['title_1']:'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['image_1'] ) )?'<img src="'.$instance['image_1'].'" style="width:100px; height: 100px"':'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['content_1'] ) )?$instance['content_1']:'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['link_1'] ) )?$instance['link_1']:'None';
-        // echo '<hr>';
-
-        // echo ( ! empty( $instance['title_2'] ) )?$instance['title_2']:'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['image_2'] ) )?'<img src="'.$instance['image_2'].'" style="width:100px; height: 100px"':'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['content_2'] ) )?$instance['content_2']:'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['link_2'] ) )?$instance['link_2']:'None';
-        // echo '<hr>';
-
-        // echo ( ! empty( $instance['title_3'] ) )?$instance['title_3']:'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['image_3'] ) )?'<img src="'.$instance['image_3'].'" style="width:100px; height: 100px"':'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['content_3'] ) )?$instance['content_3']:'None';
-        // echo '<br>';
-        // echo ( ! empty( $instance['link_3'] ) )?$instance['link_3']:'None';
-        // echo '<hr>';
-
         ?>
         <!-- /.testimonial section -->
         <div id="testi">
@@ -178,7 +147,6 @@ class Testimonial_Widget extends WP_Widget {
                 </div>  
             </div>
         </div>
-
         <?php
         echo $args['after_widget'];
     }

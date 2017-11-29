@@ -57,7 +57,31 @@ require_once( THEME_URL . "/widgets/demo.php" );
 require_once( THEME_URL . "/widgets/intro/index.php" );
 require_once( THEME_URL . "/widgets/feature/index.php" );
 require_once( THEME_URL . "/widgets/testimonial/index.php" );
+require_once( THEME_URL . "/widgets/contact-mail/index.php" );
 
+/*** Mail contact handle ***/
+add_action( 'wp_ajax_mail_handle', 'mail_handle_init' );
+add_action( 'wp_ajax_nopriv_mail_handle', 'mail_handle_init' );
+function mail_handle_init() {
+    $message_content = (isset($_POST['message_content']))?esc_attr($_POST['message_content']) : '';
+    $message_name = (isset($_POST['message_name']))?esc_attr($_POST['message_name']) : '';
+    $message_email = (isset($_POST['message_email']))?esc_attr($_POST['message_email']) : '';
+ 	
+ 	if($message_content != '' && $message_name != '' && $message_email != '') //Validate...
+ 	{
+ 		//Send email
+		$to = get_option('admin_email');
+		$subject = "Someone sent a message from ".get_bloginfo('name');
+		$headers = 'From: '. $message_email . "\r\n" .'Reply-To: ' . $message_email . "\r\n";
+		$message = $message_name.' <'.$message_email.'>: '.$message_content;
+		$sent = wp_mail($to, $subject, $message, $headers);
+		if($sent)
+			wp_send_json_success('Đã gửi mail thành công, cảm ơn đã liên hệ ^ ^');
+		else
+			wp_send_json_success('Máy chủ lỗi khi gửi mail');
+ 	}
+    die();//bắt buộc phải có khi kết thúc
+}
 
 /*** Nhúng file style.css ***/
 function tmq_style(){
@@ -86,7 +110,7 @@ function tmq_style(){
 	wp_register_style('index-red', get_template_directory_uri().'/css/css-index-red.css', 'screen');
 	wp_enqueue_style('index-red');
 
-	wp_register_script('jquery-custom', get_template_directory_uri().'/js/jquery.js', [], false, true);
+	wp_register_script('jquery-custom', get_template_directory_uri().'/js/jquery.js', [], false, false);
   	wp_enqueue_script('jquery-custom');
 
 	wp_register_script('bootstrap-js', get_template_directory_uri().'/js/bootstrap.min.js', ['jquery-custom'], false, true); //Thư viện Bootstrap phụ thuộc jQuery nên cần đăng kí jQuery chạy trước
