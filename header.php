@@ -59,16 +59,8 @@
                         <a class="navbar-brand site-name" href="#top"><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a>
                     </div>
 
-                    <div id="navbar-scroll" class="collapse navbar-collapse navbar-backyard navbar-right">
-                        <ul class="nav navbar-nav">
-                            <li><a href="#intro">About</a></li>
-                            <li><a href="#feature">Features</a></li>
-                            <li><a href="#download">Download</a></li>
-                            <li><a href="#package">Pricing</a></li>
-                            <li><a href="#testi">Reviews</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
+                    <!-- Navigator -->
+                    <?php display_menu('navbar'); ?>
                 </div>
             </nav>
         </div>

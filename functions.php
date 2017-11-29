@@ -47,10 +47,34 @@ if(!function_exists('tmq_theme_setup')){
 			'admin-preview-callback' => '',
 		);
 		add_theme_support( 'custom-header', $defaults );
+
+		//Add Menu location
+		register_nav_menu( 'navbar', __('Main Menu', 'tmq') );
   	}
   	add_action('init', 'tmq_theme_setup'); //Hook
 }
 
+//Display menu function
+if(!function_exists('display_menu')){
+  function display_menu($slug) {
+    $menu = array(
+      'theme_location' => $slug,
+      'container' => 'div',
+      'container_class' => 'collapse navbar-collapse navbar-backyard navbar-right',
+      'container_id' => 'navbar-scroll',
+      'menu_class' => 'nav navbar-nav'
+    );
+    wp_nav_menu($menu);
+  }
+}
+//Active nav item
+add_filter('nav_menu_css_class' , 'active_nav_item' , 10 , 2);
+function active_nav_item ($classes, $item) {
+    if (in_array('current-menu-item', $classes) ){
+        $classes[] = 'active';
+    }
+    return $classes;
+}
 
 //Add Widgets
 require_once( THEME_URL . "/widgets/demo.php" );
