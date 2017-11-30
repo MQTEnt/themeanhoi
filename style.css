@@ -20,19 +20,45 @@ li.widget {
 }
 
 .entry-content{
-	padding: 20px 5%;
+	padding: 20px 3%;
+    overflow: hidden;
+}
+.entry-content p{
     overflow: hidden;
 }
 article{
 	border: 1px solid #ede1e2;
 	border-radius: 15px;
-	margin: 10px 15px;
+	margin: 10px 5px;
 }
 .post-date{
-    margin-top: 30px;
+    margin-top: 20px;
     text-align: right;
     font-size: 0.85em;
     font-style: italic;
+}
+/*Related posts*/
+.related-posts{
+    border: 1px solid #ede1e2;
+    border-radius: 15px;
+    margin: 10px 15px 100px;
+}
+.related-posts h4{
+    text-align: center;
+    margin: 30px 0px 10px;
+}
+.related-posts ul li{
+    list-style-type: none;
+    text-align: left;
+}
+.related-posts ul li a{
+    padding-left: 10px;
+}
+/*Post tags*/
+.post-tags{
+    margin: 20px 0px;
+    text-align: right;
+    clear: both;
 }
 /*Button call*/
 .btn-call{

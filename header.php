@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic" />
         <?php wp_head(); ?>
 	</head>
-	<body data-spy="scroll" data-target="#navbar-scroll" <?php body_class();?>>
+	<body <?php body_class();?>>
         <!-- /.preloader -->
         <div id="preloader"></div>
         <div id="top"></div>

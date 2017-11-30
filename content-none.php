@@ -1,1 +1,1 @@
-<?php echo "Have no content !"; ?>
+<?php echo "<h4 style='text-align: center;'>Sorry, this page has no content!</h4>"; ?>

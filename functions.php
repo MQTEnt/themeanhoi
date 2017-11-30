@@ -110,10 +110,7 @@ if(!function_exists('tmq_entry_content')){
 					<img class='excerpt-post-image' src="<?php echo $feat_image; ?>" alt="">
 				<?php endif; ?>
 				<?php 
-					echo get_the_excerpt(); 
-					echo '	<p class="post-date">
-								<i class="glyphicon glyphicon-pencil"></i> '.get_the_date().'
-							</p>';
+					echo get_the_excerpt();
 				?>
 			</p>
 		<?php
@@ -121,8 +118,11 @@ if(!function_exists('tmq_entry_content')){
 		else{
 			//Hiển thị toàn bộ nội dung nếu là trang đơn (single.php) và Page (page.php)
 			the_content();
-			echo '<p class="post-date">'.get_the_date().'</p>';
 		}
+		echo get_the_tag_list('<p class="post-tags"><i class="glyphicon glyphicon-tag"></i> ',', ','</p>');
+		echo 	'<p class="post-date">
+					<i class="glyphicon glyphicon-pencil"></i> '.get_the_date().'
+				</p>';
 	}
 }
 
@@ -185,7 +185,7 @@ function tmq_style(){
 	wp_register_style('index-red', get_template_directory_uri().'/css/css-index-red.css', 'screen');
 	wp_enqueue_style('index-red');
 
-	wp_register_script('jquery-custom', get_template_directory_uri().'/js/jquery.js', [], false, false);
+	wp_register_script('jquery-custom', get_template_directory_uri().'/js/jquery.js', [], false, true);
   	wp_enqueue_script('jquery-custom');
 
 	wp_register_script('bootstrap-js', get_template_directory_uri().'/js/bootstrap.min.js', ['jquery-custom'], false, true); //Thư viện Bootstrap phụ thuộc jQuery nên cần đăng kí jQuery chạy trước
