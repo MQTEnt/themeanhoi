@@ -289,7 +289,7 @@ a:hover {
 	font-size: 48px;
 	float: left;
 	width: 20%;
-	color: #555;
+	color: #d34a4a;
 	height: 100%;
 	position: relative;
 	opacity: 0.6;
@@ -297,7 +297,7 @@ a:hover {
 	transition: all .8s ease;
 }
 .feat-list:hover i {
-	color: #d34a4a;
+	color: #f28c8c;
 	-webkit-transition: all .8s ease;
 	transition: all .8s ease;
 }
@@ -483,9 +483,10 @@ a:hover {
 	font-size: 20px;
 }
 .testi-item .client-pic img {
-	width: 70px;
-	height: 70px;
-	border-radius: 50%;
+	max-height: 350px;
+	width: auto;
+	height: 70%;
+	border-radius: 15px;
 	max-width: 100%;
 }
 .testi-item .client-info .client-name {

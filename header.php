@@ -23,7 +23,7 @@
                             <div class="logo wow fadeInDown"> <a href="<?php echo get_site_url(); ?>"><img src="<?php echo get_site_icon_url(); ?>" alt="logo"></a></div>
 
                             <!-- /.main title -->
-                            <h1 class="wow fadeInLeft">
+                            <h1 id='main-title' class="wow fadeInLeft">
                                 <?php echo get_bloginfo( 'name' ); ?>
                             </h1>
 
@@ -34,8 +34,8 @@
 
                             <!-- /.header button -->
                             <div class="head-btn wow fadeInLeft">
-                                <a href="#" class="btn-primary">Button</a>
-                                <a href="#" class="btn-default">Button</a>
+                                <!-- <a href="#" class="btn-primary">Button</a>
+                                <a href="#" class="btn-default">Button</a> -->
                             </div>
                         </div>
                     </div>
