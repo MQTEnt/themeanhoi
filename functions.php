@@ -50,6 +50,9 @@ if(!function_exists('tmq_theme_setup')){
 
 		//Add Menu location
 		register_nav_menu( 'navbar', __('Main Menu', 'tmq') );
+
+		//Add theme support thumbnail
+		add_theme_support( 'post-thumbnails' );
   	}
   	add_action('init', 'tmq_theme_setup'); //Hook
 }
@@ -80,9 +83,18 @@ function active_nav_item ($classes, $item) {
 @ Display post title
 */
 if(!function_exists('tmq_entry_header')){
-	function tmq_entry_header(){ ?>
-		<h2 class=""><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
-	<?php }
+	function tmq_entry_header(){
+		if(!is_single() && !is_page()){
+		?>
+			<h2 style='text-align: left; padding: 0px 5%;'><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+		<?php
+		}
+		else{
+		?>
+			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+		<?php
+		}
+	}
 }
 /*
 @ Display entry content
@@ -91,7 +103,20 @@ if(!function_exists('tmq_entry_content')){
 	function tmq_entry_content(){
 		if(!is_single() && !is_page()){
 			//Hiển thị phần rút ngọn nội dung nếu không phải là trang đơn (Single) và Page
-			the_excerpt();
+			$feat_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+		?>
+			<p class="excerpt-post">
+				<?php if($feat_image): ?>
+					<img class='excerpt-post-image' src="<?php echo $feat_image; ?>" alt="">
+				<?php endif; ?>
+				<?php 
+					echo get_the_excerpt(); 
+					echo '	<p class="post-date">
+								<i class="glyphicon glyphicon-pencil"></i> '.get_the_date().'
+							</p>';
+				?>
+			</p>
+		<?php
 		}
 		else{
 			//Hiển thị toàn bộ nội dung nếu là trang đơn (single.php) và Page (page.php)
