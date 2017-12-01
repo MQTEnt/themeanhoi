@@ -23,13 +23,13 @@ get_header(); ?>
                 	<p style='text-align: center; font-weight: bold'>Điền vào mẫu sau để liên hệ nhanh với chúng tôi!</p>
                     <form id="contact-form" class="form-horizontal">
                         <div class="form-group">
-                            <input type="text" id="message_name" class="form-control wow fadeInUp" placeholder="Name" required/>
+                            <input type="text" id="message_name" class="form-control wow fadeInUp" placeholder="Tên" required/>
                         </div>
                         <div class="form-group">
                             <input type="text" id="message_email" class="form-control wow fadeInUp" placeholder="Email" required/>
                         </div>					
                         <div class="form-group">
-                            <textarea rows="20" cols="20" id="message_content" class="form-control input-message wow fadeInUp"  placeholder="Message" required></textarea>
+                            <textarea rows="20" cols="20" id="message_content" class="form-control input-message wow fadeInUp"  placeholder="Nội dung yêu cầu" required></textarea>
                         </div>
                         <div class="form-group">
                             <input type="button" id="btn-submit" name="btn-submit" value="Gửi yêu cầu" class="btn btn-success wow fadeInUp" />
