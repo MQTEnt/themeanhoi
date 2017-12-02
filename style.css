@@ -134,3 +134,15 @@ img.alignleft {
 .alignleft {
     float: left;
 }
+
+/*Contact template*/
+#contact-template{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.contact-row-template{
+    border: 1px solid #ede1e2;
+    margin: 50px 0px;
+    padding: 30px 20px;
+    border-radius: 20px;
+}

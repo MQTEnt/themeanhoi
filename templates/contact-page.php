@@ -14,10 +14,10 @@ get_header(); ?>
 	<?php endif ?>
 </div><!-- End #main-content -->
 <!-- /.contact section -->
-<div id="contact">
+<div id="contact-template">
     <div class="contact" data-img-width="2000" data-img-height="1334" data-diff="100">
         <div class="container">
-            <div class="row contact-row">
+            <div class="row contact-row-template">
                 <!-- /.contact form -->
                 <div class="col-sm-6 col-sm-offset-3">
                 	<p style='text-align: center; font-weight: bold'>Điền vào mẫu sau để liên hệ nhanh với chúng tôi!</p>
