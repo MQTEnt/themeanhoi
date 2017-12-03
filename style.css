@@ -146,3 +146,13 @@ img.alignleft {
     padding: 30px 20px;
     border-radius: 20px;
 }
+
+/*Image Article*/
+.entry-content img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.entry-content div{
+    width: auto !important;
+}
