@@ -182,7 +182,7 @@ function tmq_style(){
 	wp_register_style('owl-carousel', get_template_directory_uri().'/css/owl.carousel.css', 'all');
 	wp_enqueue_style('owl-carousel');
 	
-	wp_register_style('index-red', get_template_directory_uri().'/css/css-index-red.css', 'screen');
+	wp_register_style('index-red', get_template_directory_uri().'/css/css-index-red.min.css', 'screen');
 	wp_enqueue_style('index-red');
 
 	wp_register_script('jquery-custom', get_template_directory_uri().'/js/jquery.js', [], false, true);
@@ -191,7 +191,7 @@ function tmq_style(){
 	wp_register_script('bootstrap-js', get_template_directory_uri().'/js/bootstrap.min.js', ['jquery-custom'], false, true); //Thư viện Bootstrap phụ thuộc jQuery nên cần đăng kí jQuery chạy trước
   	wp_enqueue_script('bootstrap-js');
 
-  	wp_register_script('custom-js', get_template_directory_uri().'/js/custom.js', ['jquery-custom'], false, true);
+  	wp_register_script('custom-js', get_template_directory_uri().'/js/custom.min.js', ['jquery-custom'], false, true);
   	wp_enqueue_script('custom-js');
 
   	wp_register_script('wow-js', get_template_directory_uri().'/js/wow.min.js', [], false, true);
@@ -201,3 +201,14 @@ function tmq_style(){
   	wp_enqueue_script('owl-carousel-js');
 }
 add_action('wp_enqueue_scripts', 'tmq_style'); //Hook gọi hàm nhúng file css ở trên
+
+
+
+//Remove jQuery migrate
+add_filter( 'wp_default_scripts', 'remove_jquery_migrate' );
+function remove_jquery_migrate( &$scripts){
+    if(!is_admin()){
+        $scripts->remove( 'jquery');
+        $scripts->add( 'jquery', false, array( 'jquery-core' ), '1.2.1' );
+    }
+}
