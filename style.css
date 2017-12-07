@@ -157,3 +157,9 @@ img.alignleft {
 .entry-content div{
     width: auto !important;
 }
+/*Zoom image*/
+.featherlight-content .caption{
+    text-align: center !important;
+    display: block;
+    width: 100%;
+}
