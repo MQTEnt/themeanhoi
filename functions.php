@@ -134,6 +134,9 @@ require_once( THEME_URL . "/widgets/testimonial/index.php" );
 require_once( THEME_URL . "/widgets/contact-mail/index.php" );
 require_once( THEME_URL . "/widgets/social-footer/index.php" );
 
+require_once( THEME_URL . "/setting/theme-setting.php" );
+$theme_setting = new TMQ_Theme_Setting();
+
 /*** Mail contact handle ***/
 add_action( 'wp_ajax_mail_handle', 'mail_handle_init' );
 add_action( 'wp_ajax_nopriv_mail_handle', 'mail_handle_init' );
