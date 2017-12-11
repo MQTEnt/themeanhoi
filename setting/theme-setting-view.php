@@ -9,7 +9,7 @@
                 <tr>
                     <th scope="row"><label for="footer">Footer</label></th>
                     <td>
-                        <input type="text" id="footer" name="tmq_theme_setting[footer]" placeholder="Enter Your Footer" <?php echo (!is_null($footer))?'value="'.$footer.'"' : ''; ?> class="regular-text">
+                        <textarea id="footer" rows="10" cols="54" name="tmq_theme_setting[footer]"><?php echo (!is_null($footer))?$footer : ''; ?></textarea>
                     </td>
                 </tr>
                 <tr>

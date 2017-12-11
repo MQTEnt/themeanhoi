@@ -13,7 +13,7 @@ class TMQ_Theme_Setting {
 		//Add Menu
 		add_action('admin_menu', function() {
 			add_submenu_page(
-				'options-general.php',
+				'themes.php',
 				'TMQ Theme Setting',
 				'TMQ Setting',
 				'manage_options',
