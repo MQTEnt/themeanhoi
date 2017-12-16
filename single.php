@@ -42,6 +42,9 @@
 								}
 							?>
 						</div>
+						<div class="ad">
+							<!-- Ad -->
+						</div>
 					</div>
 				</div>
 			</div>
